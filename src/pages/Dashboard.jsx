@@ -31,7 +31,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className=" container grid grid-cols-3 grid-rows-1 gap-4">
+      <div className=" container grid grid-cols-3 grid-rows-1 gap-4 pb-10">
         <SimpleCard />
         <SimpleCard />
         <SimpleCard />
