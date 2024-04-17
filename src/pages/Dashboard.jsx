@@ -1,3 +1,4 @@
+import { SimpleCard } from "@/components/ui/Simplecard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React from "react";
@@ -22,13 +23,21 @@ const Dashboard = () => {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="flex w-full max-w-sm items-center space-x-2">
-              <Input type="text" placeholder="Lyrics" />
-              <Button type="submit" variant="outline">
+              <Input type="text" placeholder="Lyrics" className="text-black" />
+              <Button type="submit" variant="outline" className="text-black">
                 Search
               </Button>
             </div>
           </div>
         </div>
+      </div>
+      <div className=" container grid grid-cols-3 grid-rows-1 gap-4">
+        <SimpleCard />
+        <SimpleCard />
+        <SimpleCard />
+        <SimpleCard />
+        <SimpleCard />
+        <SimpleCard />
       </div>
     </section>
   );
