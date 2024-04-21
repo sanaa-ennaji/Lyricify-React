@@ -15,9 +15,7 @@ export function SimpleCard({ info }) {
   let songinfo = {
     name: "default",
   };
-  // console.log("are all undifined" + !areAllPropertiesUndefined(info));
   if (!areAllPropertiesUndefined(info)) {
-    console.log("heeere:", info);
     songinfo = info;
   }
   console.log(songinfo);
@@ -31,13 +29,7 @@ export function SimpleCard({ info }) {
         <Typography>{info.artist}</Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Link
-          to={{
-            pathname: `/song/${info.trackId}`,
-            state: { some: "info" },
-            // state={{ some: "value" }}
-          }}
-        >
+        <Link to={`/song/${info.song}`} state={{ info }}>
           <Button>Plus Info</Button>
         </Link>
       </CardFooter>
