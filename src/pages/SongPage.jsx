@@ -2,16 +2,21 @@ import { DefaultTimeline } from "@/components/ui/Timeline";
 import { Input } from "@/components/ui/input";
 import { Button } from "@material-tailwind/react";
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 const SongPage = () => {
+  let location = useLocation();
+  const info = location.state?.info;
+  // console.log(info);
+  console.log("Received info:", location.state);
   return (
     <div>
       <section className="bg-gray-900 text-white">
         <div className="mx-auto max-w-screen-xl px-4 pt-5 h-screen">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-              Song Title
-              <span className="sm:block py-2"> By Artist name. </span>
+              {info}
+              <span className="sm:block py-2"> By {info}. </span>
             </h1>
           </div>
           <div className=" mt-36 grid grid-cols-2 grid-rows-1 gap-8">

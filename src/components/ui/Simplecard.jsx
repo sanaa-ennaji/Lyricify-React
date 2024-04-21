@@ -5,22 +5,41 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
-export function SimpleCard() {
+function areAllPropertiesUndefined(obj) {
+  return Object.values(obj).every((value) => value === undefined);
+}
+
+export function SimpleCard({ info }) {
+  let songinfo = {
+    name: "default",
+  };
+  // console.log("are all undifined" + !areAllPropertiesUndefined(info));
+  if (!areAllPropertiesUndefined(info)) {
+    console.log("heeere:", info);
+    songinfo = info;
+  }
+  console.log(songinfo);
+
   return (
     <Card className="mt-6 w-96">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">
-          Song Title
+          {info.song}
         </Typography>
-        <Typography>
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to &quot;Naviglio&quot; where you can enjoy the main
-          night life in Barcelona.
-        </Typography>
+        <Typography>{info.artist}</Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button>Plus Info</Button>
+        <Link
+          to={{
+            pathname: `/song/${info.trackId}`,
+            state: { some: "info" },
+            // state={{ some: "value" }}
+          }}
+        >
+          <Button>Plus Info</Button>
+        </Link>
       </CardFooter>
     </Card>
   );

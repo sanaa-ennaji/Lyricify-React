@@ -5,13 +5,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import SongPage from "./pages/SongPage.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
   },
   {
-    path: "/song",
+    path: "/song/:id",
     element: <SongPage />,
   },
 ]);

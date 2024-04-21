@@ -23,7 +23,7 @@ export function DefaultTimeline() {
           <TimelineBody className="pb-8">
             <Typography
               variant="small"
-              color="gary"
+              color="gray"
               className="font-normal text-gray-300"
             >
               The key to more success is to have a lot of pillows. Put it this
@@ -44,7 +44,7 @@ export function DefaultTimeline() {
           <TimelineBody className="pb-8">
             <Typography
               variant="small"
-              color="gary"
+              color="gray"
               className="font-normal text-gray-300"
             >
               The key to more success is to have a lot of pillows. Put it this
@@ -64,7 +64,7 @@ export function DefaultTimeline() {
           <TimelineBody>
             <Typography
               variant="small"
-              color="gary"
+              color="gray"
               className="font-normal text-gray-300"
             >
               The key to more success is to have a lot of pillows. Put it this
