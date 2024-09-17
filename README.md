@@ -1,4 +1,4 @@
-# Brif 18: Plateforme de Recherche de Paroles de Chansons
+# Brif 18: projet en equip 5
 
 Votre mission est de concevoir et de développer une plateforme permettant aux utilisateurs de rechercher des paroles de chansons et d'afficher des détails sur ces chansons. Cette plateforme peut être réalisée avec du JavaScript, HTML et CSS, ou à l'aide d'un framework/bibliothèque JavaScript tel que **Vue.js**, **React**, ou tout autre outil que vous jugerez approprié.
 
